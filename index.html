@@ -5,20 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Violytra</title>
   <style>
-    body { font-family: system-ui, sans-serif; background: #0f0f1a; color: #fff; margin: 0; padding: 40px; }
-    h1 { color: #7C4DFF; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0f0f1a; color: #fff; margin: 0; padding: 40px; line-height: 1.5; }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 { color: #7C4DFF; margin-bottom: 0.25em; }
+    h2 { color: #BB86FC; margin-top: 2em; }
     a { color: #BB86FC; }
+    .downloads { list-style: none; padding: 0; display: grid; gap: 12px; }
+    .downloads li { background: #1a1a2e; border: 1px solid #2a2a44; border-radius: 10px; padding: 16px 18px; }
+    .downloads .title { display: block; font-weight: 600; font-size: 1.05em; margin-bottom: 4px; }
+    .downloads .desc { color: #c9c9d6; font-size: 0.95em; }
   </style>
 </head>
 <body>
-  <h1>Violytra</h1>
-  <p>Supercharge your Discord experience. A client modification for Discord mobile.</p>
-  <h2>Downloads</h2>
-  <ul>
-    <li><a href="https://github.com/danishtesting4/violytra-mod/releases/latest">Violytra (mod)</a></li>
-    <li><a href="https://github.com/danishtesting4/violytra-manager/releases/latest">Violytra Manager</a></li>
-  </ul>
-  <h2>Plugins</h2>
-  <p>Plugin repository: <a href="https://raw.githubusercontent.com/danishtesting4/violytra-community-plugins/main/index.json">index.json</a></p>
+  <div class="container">
+    <h1>Violytra</h1>
+    <p>Supercharge your Discord experience. A client modification for Discord mobile.</p>
+
+    <h2>Downloads</h2>
+    <ul class="downloads">
+      <li>
+        <a class="title" href="https://github.com/Violytra/violytra-manager/releases/latest">Non-root? Use Violytra Manager</a>
+        <span class="desc">Patches and installs Violytra on your device without root.</span>
+      </li>
+      <li>
+        <a class="title" href="https://github.com/Violytra/violytra-xposed/releases/latest">Root? Use Violytra Xposed</a>
+        <span class="desc">Xposed/LSPosed module for rooted devices — no Reseam patching required.</span>
+      </li>
+    </ul>
+
+    <h2>Plugins</h2>
+    <p>Plugin repository: <a href="https://raw.githubusercontent.com/Violytra/violytra-community-plugins/main/index.json">index.json</a></p>
+  </div>
 </body>
 </html>
