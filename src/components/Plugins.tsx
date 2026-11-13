@@ -127,7 +127,7 @@ function PluginCard({ plugin }: { plugin: Plugin }) {
             href={plugin.url}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-2 text-xs font-semibold text-zinc-900 transition hover:bg-zinc-200"
+            className="m3-shape inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-semibold text-zinc-900 hover:bg-zinc-100"
           >
             <DownloadSimple className="h-3.5 w-3.5" weight="bold" /> Install
           </a>
@@ -137,7 +137,7 @@ function PluginCard({ plugin }: { plugin: Plugin }) {
             href={plugin.homepage}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-3 py-2 text-xs font-medium text-zinc-200 transition hover:bg-white/10"
+            className="m3-shape inline-flex items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 text-xs font-medium text-zinc-200 hover:bg-white/10"
           >
             <ArrowSquareOut className="h-3.5 w-3.5" /> Source
           </a>
@@ -213,7 +213,7 @@ export function Plugins() {
           href={REPO}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
+          className="m3-shape inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10"
         >
           <GitBranch className="h-4 w-4" /> Contribute a plugin
         </a>

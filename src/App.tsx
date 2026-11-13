@@ -210,7 +210,7 @@ function Hero() {
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <a
             href="#install"
-            className="inline-flex items-center gap-2 rounded-lg bg-violet-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-violet-400"
+            className="m3-shape inline-flex items-center gap-2 rounded-full bg-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 hover:bg-violet-400"
           >
             Install Violytra
             <ArrowRight className="h-4 w-4" weight="bold" />
@@ -219,7 +219,7 @@ function Hero() {
             href="https://github.com/Violytra"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-white/20 hover:text-zinc-100"
+            className="m3-shape inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-medium text-zinc-200 hover:border-white/25 hover:bg-white/[0.06] hover:text-white"
           >
             <GithubLogo className="h-4 w-4" />
             Source on GitHub
@@ -292,7 +292,7 @@ function Install() {
                 href={b.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-fit items-center gap-1.5 rounded-lg bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-white"
+                className="m3-shape inline-flex w-fit items-center gap-1.5 rounded-full bg-zinc-100 px-5 py-2.5 text-sm font-semibold text-zinc-900 hover:bg-white"
               >
                 Download
                 <ArrowUpRight className="h-4 w-4" weight="bold" />
