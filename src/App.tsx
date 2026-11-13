@@ -154,8 +154,6 @@ function Header() {
               {l.label}
             </a>
           ))}
-          <span className="h-5 w-px bg-white/10" />
-          <ThemePicker />
         </div>
 
         <button
@@ -182,9 +180,6 @@ function Header() {
                   {l.label}
                 </a>
               ))}
-              <div className="pt-3">
-                <ThemePicker />
-              </div>
             </div>
           </motion.div>
         )}
