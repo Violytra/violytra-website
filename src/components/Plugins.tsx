@@ -72,15 +72,25 @@ function normalize(index: RepoIndex): Plugin[] {
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function PluginSkeleton() {
+function MaterialLoader() {
   return (
-    <div className="animate-pulse rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-      <div className="h-4 w-1/2 rounded bg-white/10" />
-      <div className="mt-3 h-3 w-1/3 rounded bg-white/5" />
-      <div className="mt-5 space-y-2">
-        <div className="h-3 rounded bg-white/5" />
-        <div className="h-3 w-4/5 rounded bg-white/5" />
-      </div>
+    <div className="flex flex-col items-center justify-center gap-5 py-16">
+      <motion.div
+        className="h-14 w-14 bg-gradient-to-br from-violet-400 to-fuchsia-400 shadow-lg shadow-violet-500/20"
+        animate={{
+          borderRadius: [
+            "30% 70% 70% 30% / 30% 30% 70% 70%",
+            "58% 42% 35% 65% / 52% 48% 52% 48%",
+            "70% 30% 30% 70% / 70% 70% 30% 30%",
+            "42% 58% 65% 35% / 48% 52% 48% 52%",
+            "30% 70% 70% 30% / 30% 30% 70% 70%",
+          ],
+          rotate: [0, 90, 180, 270, 360],
+          scale: [1, 1.06, 1, 1.06, 1],
+        }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <p className="text-sm font-medium tracking-wide text-zinc-400">Loading plugins…</p>
     </div>
   );
 }
@@ -210,13 +220,7 @@ export function Plugins() {
       </Reveal>
 
       <div className="mt-10">
-        {loading && (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[0, 1, 2].map((i) => (
-              <PluginSkeleton key={i} />
-            ))}
-          </div>
-        )}
+        {loading && <MaterialLoader />}
 
         {!loading && error && (
           <div className="flex flex-col items-center gap-3 rounded-2xl border border-red-400/20 bg-red-500/5 p-10 text-center">

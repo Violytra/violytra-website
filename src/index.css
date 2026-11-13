@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+/* Material You expressive shape hover */
+.m3-shape {
+  transition:
+    border-radius 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    transform 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 250ms ease;
+}
+.m3-shape:hover {
+  border-radius: 1.5rem 0.7rem 1.5rem 0.7rem;
+}
+.m3-shape:active {
+  transform: scale(0.97);
+}

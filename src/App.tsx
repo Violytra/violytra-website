@@ -11,7 +11,6 @@ import {
 } from "@phosphor-icons/react";
 import { Reveal } from "./components/Reveal";
 import { Plugins } from "./components/Plugins";
-import { ThemePicker } from "./components/ThemePicker";
 
 type Platform = "android" | "ios";
 
