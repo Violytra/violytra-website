@@ -105,20 +105,20 @@ function CyclingWord() {
     <motion.span
       layout
       transition={{ layout: { type: "spring", stiffness: 400, damping: 30 } }}
-      className="relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-violet-400/30 bg-violet-500/10 px-4 py-1 align-middle"
+      className="inline-grid place-items-center overflow-hidden rounded-2xl border border-violet-400/30 bg-violet-500/10 px-4 py-1 align-middle leading-[1.1]"
     >
       {/* Invisible sizer keeps the box sized to the current word for smooth resizing */}
-      <span className="invisible whitespace-nowrap" aria-hidden="true">
+      <span className="invisible col-start-1 row-start-1 whitespace-nowrap" aria-hidden="true">
         {word}
       </span>
       <AnimatePresence initial={false}>
         <motion.span
           key={word}
-          initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+          initial={{ opacity: 0, y: 12, filter: "blur(6px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          exit={{ opacity: 0, y: -14, filter: "blur(6px)" }}
+          exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 flex items-center justify-center whitespace-nowrap text-violet-300"
+          className="col-start-1 row-start-1 whitespace-nowrap text-violet-300"
         >
           {word}
         </motion.span>
